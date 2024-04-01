@@ -1,0 +1,165 @@
+::-webkit-scrollbar {
+    background: black;
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #f0a830;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar:hover {
+    width: 10px;
+}
+
+::selection{
+  background: #f0a830;
+  color: black;
+}
+
+:target {
+  scroll-margin-top: 3em;
+}
+
+textarea:focus, input:focus, select:focus {
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body, p, h1, ul, li, blockquote {
+	padding: 0px;
+	margin: 0px;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+	background: black;
+	background-size: 100%;
+	color: gray;
+	font-size: 16px;
+	line-height: 1.3;
+	text-align: center;
+}
+
+* {box-sizing:border-box;}
+
+li {
+	list-style: none;	
+}
+
+a {
+	text-decoration: none;
+	color: gray;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+img {
+	display: block;
+}
+
+h1 {
+	font-size: 2em;
+}
+
+h2 {
+  font-size: 1.825em;
+}
+
+h3 {
+	font-size: 1.250em;
+}
+
+span {
+	font-size: 1em;
+	color: black;
+}
+
+input, button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.textOn {
+	color: #f0a830;
+}
+
+.poppinsRegular, h3, p {
+	font-family: "Poppins Regular";
+}
+
+.poppinsBold, h1, span {
+	font-family: "Poppins Bold";
+}
+
+.poppinsSemibold, a, label, input{
+	font-family: "Poppins Semibold";
+}
+
+.poppinsLight {
+	font-family: "Poppins Light"; 
+}
+
+/*===================================Estilo Página===================================*/
+
+body {
+	background: black;
+	color: darkgray;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.divTextoError > img {
+	width: 400px;
+	height: 400px;
+	margin: 50px auto -100px auto;
+}
+
+.numError {
+	font-size: 15em;
+}
+
+.titleError {
+	font-size: 1.5em;
+	color: darkgray;
+}
+
+
+/*===================================Fontes Gerais===================================*/
+
+@font-face{
+    font-family: Poppins Regular;
+
+    /*Caso a fonte esteja na mesma pasta*/
+    src: url("../fontes/Poppins/Poppins-Regular.ttf");
+}
+
+@font-face{
+	font-family: Poppins Bold;
+
+    src: url("../fontes/Poppins/Poppins-Bold.ttf");
+}
+
+@font-face{
+	font-family: Poppins Semibold;
+
+    src: url("../fontes/Poppins/Poppins-SemiBold.ttf");
+}
+
+@font-face{
+	font-family: Poppins Light;
+
+    src: url("../fontes/Poppins/Poppins-Light.ttf");
+}

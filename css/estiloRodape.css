@@ -1,0 +1,235 @@
+/*===================================Rodapé===================================*/
+
+footer {
+	border-top: 1px solid white;
+}
+
+.rodape {
+	grid-area: rodape;
+	background: black;
+	max-width: 1310px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 50px 30px 0px 30px;
+	height: auto;
+	display: grid;
+	color: darkgray;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 0.5fr 0.6fr;
+	grid-template-areas: "sobreNos contato formContato"
+						 "sobreNos redesSociais formContato";
+	font-size: 14px;
+}
+
+/*Sobre Nos*/
+
+.sobreNos {
+	grid-area: sobreNos;
+	text-align: left;
+	padding-right: 70px;
+}
+
+.sobreNos h3 {
+	color: #f0a830;
+}
+
+.sobreNos p + p {
+	margin-top: 10px;
+}
+
+/*Contato*/
+
+.contato {
+	grid-area: contato;
+	text-align: left;
+}
+
+.contato h3 {
+	color: #f0a830;
+}
+
+.contato i {
+	position: absolute;
+	z-index: 0;
+}
+
+.contato > ul > li > p {
+	padding-left: 40px;	
+	padding-top: 2px;
+}
+
+.contato li {
+	margin-top: 10px;
+}
+
+.contato > ul > li > p > a:hover {
+	color: #f0a830;
+}
+
+/*Formulário Contato*/
+
+.formContato {
+	grid-area: formContato;
+	text-align: left;
+	margin-left: 20px;	
+}
+
+.formContato > p {
+	margin-bottom: 10px;
+}
+
+.formContato ul li {
+	padding-bottom: 10px;
+}
+
+.formContato ul ul {
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.formContato ul ul li input{
+	margin-top: 10px;
+}
+
+.formContato h3 {
+	color: #f0a830;
+}
+
+.formContato input {
+	border-radius: 25px;
+	border: none;
+	color: white;
+	background: rgba(255, 255, 255, 0.1);
+	padding-left: 10px;
+	height: 40px;
+}
+
+.formContato label {
+	margin-left: 5px;
+}
+
+#campoNome {
+	width: 100%;
+}
+
+#campoEmail, #campoTelefone{
+	width: 95%;
+}
+
+#campoTelefone {
+	margin-left: 5px;
+}
+
+#campoEmail {
+	margin-left: 5px;	
+}
+
+#enviar {
+	width: 40%;
+	float: right;
+	background: #f0a830;
+	color: black;
+  	cursor: pointer;
+  	height: 30px;
+}
+
+#enviar:hover {
+	transform: scale(1.1);
+  	color: white;	
+}
+
+/*Redes Sociais*/
+
+.redesSociais {
+	text-align: left;
+}
+
+.redesSociais h3 {
+	color: #f0a830;
+}
+
+.redesSociais ul {
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.social {
+	width: 40px;
+	height: 40px;
+	border-radius: 25px;
+	background: lightgray;
+	text-align: center;
+	padding-top: 10px;
+	margin-right: 5px;
+	margin-top: 10px;
+}
+
+.social:hover {
+	background: #f0a830;
+}
+
+#instagramIcon, #facebookIcon, #linkedinIcon, #behanceIcon {
+	font-size: 20px;
+	color: black;
+}
+
+.dev {
+	grid-area: dev;
+	text-align: center;
+	margin-top: 20px;
+	padding: 10px;
+	font-size: 0.875em;
+	background: rgba(255, 255, 255, 0.1);
+}
+
+/*===================================Responsividade===================================*/
+
+@media(max-width: 1070px) {
+	.rodape {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 0.5fr 0.5fr 1fr;
+		grid-template-areas: "sobreNos contato"
+							 "sobreNos redesSociais"
+							 "formContato formContato"
+		;
+	}
+
+	.formContato {
+		margin-left: 0px;	
+	}
+
+	.formContato ul ul li{
+		width: 100%;
+	}
+
+	#campoEmail {
+		width: 100%;
+	}
+}
+
+@media(max-width: 640px) {
+	.rodape {
+		grid-template-columns: 1fr;
+		grid-template-rows: 0.5fr 0.5fr 0.4fr 1fr;
+		grid-template-areas: "sobreNos"
+							 "contato"
+							 "redesSociais"
+							 "formContato"
+		;
+	}
+}
+
+@media(max-width: 470px) {
+	.formContato ul ul {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	
+	#campoTelefone {
+        width: 100%;
+	}
+
+	.dev {
+		font-size: 0.75em;
+	}
+}
